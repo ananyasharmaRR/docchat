@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chat with your PDF documents using AI-powered search.">
+    <title>DocChat — Chat with your documents</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">D</div>
+                <div>
+                    <h1>DocChat</h1>
+                    <span>AI DOCUMENT ASSISTANT</span>
+                </div>
+            </div>
+
+            <button id="new-chat-btn" class="new-chat-btn">
+                <span>＋</span> New conversation
+            </button>
+
+            <div class="sidebar-section">
+                <div class="section-heading">
+                    <span>YOUR DOCUMENTS</span>
+                    <span id="document-count" class="count">0</span>
+                </div>
+
+                <div id="document-list" class="document-list">
+                    <p class="empty-documents">No documents uploaded yet.</p>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="status-dot"></div>
+                <span>DocChat AI is ready</span>
+            </div>
+        </aside>
+
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <h2>Document Assistant</h2>
+                    <p>Ask questions. Get answers from your PDFs.</p>
+                </div>
+
+                <div class="topbar-badge">
+                    <span class="status-dot"></span>
+                    AI Powered
+                </div>
+            </header>
+
+            <section class="workspace">
+
+                <div id="welcome-screen" class="welcome-screen">
+                    <div class="welcome-icon">✦</div>
+
+                    <p class="eyebrow">YOUR PERSONAL DOCUMENT ASSISTANT</p>
+
+                    <h2>Knowledge, just a question away.</h2>
+
+                    <p class="welcome-description">
+                        Upload your PDF documents and let AI help you
+                        understand, explore and find information instantly.
+                    </p>
+
+                    <label for="pdf-upload" class="upload-card">
+                        <span class="upload-icon">↑</span>
+                        <strong>Upload your PDF</strong>
+                        <span>Click to browse · Maximum 20 MB</span>
+                    </label>
+
+                    <div class="welcome-note">
+                        <span>🔒</span>
+                        Your documents are processed by DocChat.
+                    </div>
+                </div>
+
+                <div id="chat-messages" class="chat-messages hidden"></div>
+
+            </section>
+
+            <section class="composer-area">
+
+                <div id="upload-status" class="upload-status hidden"></div>
+
+                <form id="chat-form" class="chat-form">
+                    <textarea
+                        id="question-input"
+                        placeholder="Ask something about your documents..."
+                        rows="1"
+                        maxlength="2000"
+                    ></textarea>
+
+                    <button type="submit" id="send-btn" aria-label="Send question">
+                        ↑
+                    </button>
+                </form>
+
+                <div class="composer-bottom">
+                    <label for="pdf-upload" class="attach-button">
+                        ＋ Add PDF
+                    </label>
+
+                    <span>AI can make mistakes. Verify important information.</span>
+                </div>
+
+                <input
+                    type="file"
+                    id="pdf-upload"
+                    accept=".pdf,application/pdf"
+                    hidden
+                >
+
+            </section>
+
+        </main>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

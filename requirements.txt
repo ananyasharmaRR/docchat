@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic-settings
+python-dotenv
+groq
+fastembed==0.9.1
+pypdf
+rank-bm25
+numpy
+sqlalchemy
+psycopg[binary]
+httpx
+pytest
+PyYAML==6.0.2
